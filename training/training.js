@@ -56,12 +56,21 @@ function Hamburger() {
   let open = document.getElementById("open")
   let close = document.getElementById("close")
 
+  let normalNav = document.getElementById("normal-nav")
+  let mobileNav = document.getElementById("mobile-nav")
+
   if (burgerOpen) {
     open.style.display = "flex";
     close.style.display = "none";
+
+    normalNav.classList.remove("z-index-6")
+    mobileNav.style.display = "none"
   } else {
     open.style.display = "none";
     close.style.display = "flex";
+
+    normalNav.classList.add("z-index-6")
+    mobileNav.style.display = "block"
   }
 
   burgerOpen = !burgerOpen;

@@ -932,10 +932,20 @@ ul.tech li a:hover {
       margin-top: 20px;
       margin-bottom: 20px;
   }
+  
+  .about-section {
+    margin-left: 0;
+  }
+
+  .all-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   .nav-items {
     width: 80%;
     height: 100%;
@@ -943,6 +953,13 @@ ul.tech li a:hover {
     justify-content: space-around;
     align-items: center;
   }
+
+}
+.z-index-6 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 6;
 }
 
 .hamburger {
@@ -1011,4 +1028,34 @@ ul.tech li a:hover {
   .hamburger {
     display: block;
   }
+}
+
+.mobile-items {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+ul {
+  padding-inline-start: 0;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  background-color: #fffae5;
+}
+
+.mobile-nav ul {
+  height: 100%;
+  width: 100%;
 }
