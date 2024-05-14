@@ -50,6 +50,23 @@ function Video(obj) {
       ironManClass.getElementsByTagName("p")[0].style.display = "block"
   }
 }
+
+let burgerOpen = false;
+function Hamburger() {
+  let open = document.getElementById("open")
+  let close = document.getElementById("close")
+
+  if (burgerOpen) {
+    open.style.display = "flex";
+    close.style.display = "none";
+  } else {
+    open.style.display = "none";
+    close.style.display = "flex";
+  }
+
+  burgerOpen = !burgerOpen;
+}
+
 $(document).ready(function(){
   $('.dropdown-toggle').click(function(){
     $('.dropdown-menu').toggleClass('active');
@@ -79,3 +96,4 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+
